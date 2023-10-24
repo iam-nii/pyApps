@@ -2,6 +2,7 @@ from data import resources, menu
 import sys
 
 def getReport(_report):
+    """Gets a report of the quantity of available resources"""
     water = _report['water']
     coffee = _report['coffee']
     milk = _report['milk']
@@ -9,6 +10,7 @@ def getReport(_report):
     return f"water : {water}ml\ncoffee: {coffee}g\nmilk: {milk}ml\nmoney: ${profit}"
 
 def makeCoffee(_choice):
+    """updates the resource dictionary depending on the order made"""
     _menu = menu[_choice]
     _milk = 0
     total = 0
@@ -51,6 +53,7 @@ def processCoins(_choice):
 
 
 def checkResources(_choice):
+    """Checks the resources to see if there are sufficient resources for the order"""
     insufficient = True
     _menu = menu[_choice]
     _milk = 0
@@ -77,6 +80,7 @@ def checkResources(_choice):
 
 
 def checkInput(_choice):
+    """Checks the users input"""
     if choice == 'off':
         sys.exit()
     elif choice == 'report':
@@ -87,6 +91,7 @@ def checkInput(_choice):
             processCoins(_choice)
 
 
+# Start program
 profit = 0
 while True:
     choice = input("What would you like? (espresso/latte/cappuccino):")
