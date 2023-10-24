@@ -3,6 +3,7 @@ from art import logo, vs
 from data import data
 import os
 
+
 print(logo)
 
 
@@ -53,11 +54,10 @@ while notGameOver:
     while invalidAns:
         # Ask "who has more followers A or B?"
         guess = input("Who has more followers? Type 'A'  or 'B': ").upper()
-        os.system('cls')
+        #os.system('cls')
         if guess == 'A':
             if A_followers > B_followers:
                 score += 1
-
                 print(f"You are right! Current score: {score}")
             else:
                 print(f"Sorry that's wrong. Final score: {score}")
@@ -73,5 +73,3 @@ while notGameOver:
             invalidAns = False
         else:
             invalidAns = True
-
-
