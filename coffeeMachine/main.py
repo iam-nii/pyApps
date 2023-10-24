@@ -1,17 +1,17 @@
 from data import resources, menu
 import sys
 
-
 def getReport(_report):
     water = _report['water']
     coffee = _report['coffee']
     milk = _report['milk']
-    money = 0
-    return f"water : {water}ml\ncoffee: {coffee}g\nmilk: {milk}ml\nmoney: ${money}"
+    global profit
+    return f"water : {water}ml\ncoffee: {coffee}g\nmilk: {milk}ml\nmoney: ${profit}"
 
 def makeCoffee(_choice):
     _menu = menu[_choice]
     _milk = 0
+    total = 0
 
     # Check how many resources are needed
     _ingredients = _menu['ingredients']
@@ -25,17 +25,19 @@ def makeCoffee(_choice):
     resources['water'] -= _water
     resources['milk'] -= _milk
     resources['coffee'] -= _coffee
-    resources['money'] += _cost
+    total += _cost
+
+    global profit
+    profit = total
 
 
 def processCoins(_choice):
+    """Checks to see if the money is sufficient and returns the total amount inserted"""
     print("Please insert coins.")
-    quarters = float(input("How many quarters?: ")) * 0.25# 0.25
-    dimes = float(input("How many dimes?: ")) * 0.10 # 0.10
-    nickles = float(input("How many nickles?: ")) * 0.05 # 0.05
-    pennies = float(input("How many nickles?: ")) * 0.01 # 0.01
-    total = quarters + dimes + nickles + pennies
-
+    total = float(input("How many quarters?: ")) * 0.25# 0.25
+    total += float(input("How many dimes?: ")) * 0.10 # 0.10
+    total += float(input("How many nickles?: ")) * 0.05 # 0.05
+    total += float(input("How many nickles?: ")) * 0.01 # 0.01
     # Get the cost
     cost = menu[_choice]['cost']
     print(cost)
@@ -46,8 +48,8 @@ def processCoins(_choice):
         change = "{:.2f}".format(total - cost)
         print(f"Here is ${change} in change.")
         makeCoffee(_choice)
+
         print(f"Here is your {_choice} ☕, Enjoy!")
-        print(resources)
 
 
 def checkResources(_choice):
@@ -68,14 +70,11 @@ def checkResources(_choice):
     #     print(_milk)
     # print(_coffee)
 
-    if _water > resources['water']:
-        print("Sorry, there is not enough water")
-    elif _milk > resources['milk']:
-        print("Sorry, there is not enough milk")
-    elif _coffee > resources['coffee']:
-        print("Sorry, there is not enough coffee")
-    else:
-        insufficient = False
+    for item in _ingredients:
+        if _ingredients[item] > resources[item]:
+            print(f"Sorry, there is not enough {item}")
+        else:
+            insufficient = False
     return insufficient
 
 
@@ -90,6 +89,7 @@ def checkInput(_choice):
             processCoins(_choice)
 
 
+profit = 0
 while True:
     choice = input("What would you like? (espresso/latte/cappuccino):")
     while choice != "espresso" and choice != "latte" and choice != "cappuccino"\
