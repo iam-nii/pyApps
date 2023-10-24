@@ -40,15 +40,13 @@ def processCoins(_choice):
     total += float(input("How many nickles?: ")) * 0.01 # 0.01
     # Get the cost
     cost = menu[_choice]['cost']
-    print(cost)
     # Check if the customer put in enough coins
     if total < cost:
         print("Sorry, that's not enough. Money refunded.")
     else:
-        change = "{:.2f}".format(total - cost)
+        change = round((total - cost), 2)
         print(f"Here is ${change} in change.")
         makeCoffee(_choice)
-
         print(f"Here is your {_choice} ☕, Enjoy!")
 
 
