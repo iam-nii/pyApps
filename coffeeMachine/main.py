@@ -1,8 +1,5 @@
 from data import resources, menu
 import sys
-espresso = 0
-latte = 1
-cappuccino = 2
 
 
 def getReport(_report):
