@@ -1,3 +1,9 @@
-https://docs.python.org/3/library/turtle.html
+TURTLE COLOURS
+___________________________________
 https://cs111.wellesley.edu/reference/colors
+USED FOR IMPORTING PACKAGES AND MODELS
+______________________________________
 https://pypi.org
+TURTLE DOCUMENTATION
+______________________
+https://docs.python.org/3/library/turtle.html
