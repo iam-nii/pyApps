@@ -21,8 +21,8 @@ while game_is_on:
     screen.update()
     time.sleep(0.1)
 
-    if snake.segments[0].xcor() >= 300 or snake.segments[0].xcor() <= -300 or snake.segments[0].ycor() >= 300 or \
-            snake.segments[0].ycor() <= -300:
+    if snake.segments[0].xcor() >= 290 or snake.segments[0].xcor() <= -290 or snake.segments[0].ycor() >= 290 or \
+            snake.segments[0].ycor() <= -290:
         game_is_on = False
 
     snake.move()
