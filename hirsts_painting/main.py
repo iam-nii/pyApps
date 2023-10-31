@@ -31,7 +31,7 @@ turtle.hideturtle()
 turtle.speed("fastest")
 def move(t):
     for _ in range(10):
-        t.dot(20, random.choice(colors))
+        t.angle(20, random.choice(colors))
         t.penup()
         t.forward(50)
     t.setheading(90)
