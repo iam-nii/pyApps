@@ -1,6 +1,7 @@
 from turtle import Turtle
 import time
 
+
 class Ball(Turtle):
     def __init__(self):
         super().__init__()
@@ -21,7 +22,6 @@ class Ball(Turtle):
 
     def Bounce_x(self):
         self.x_move *= -1
-
 
     def NewGame(self):
         time.sleep(2)
