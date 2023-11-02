@@ -22,6 +22,7 @@ class Ball(Turtle):
     def Bounce_x(self):
         self.x_move *= -1
 
+
     def NewGame(self):
         time.sleep(2)
         self.goto(0, 0)
