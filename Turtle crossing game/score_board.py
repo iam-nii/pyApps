@@ -1,4 +1,5 @@
 from turtle import Turtle
+import time
 
 FONT = ("Courier", 18, "bold")
 ALIGNMENT = "center"
@@ -18,6 +19,7 @@ class ScoreBoard(Turtle):
             self.score += 1
             self.clear()
             self.write(arg=f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+            time.sleep(1)
             return True
 
     def game_over(self, player, car):
@@ -25,3 +27,9 @@ class ScoreBoard(Turtle):
             self.goto(0, 0)
             self.write(arg="GAME OVER!", font=FONT, align=ALIGNMENT)
             return True
+
+    def new_game(self):
+        self.clear()
+        self.goto(POSITION)
+        self.score = 0
+        self.write(arg=f"Score: {self.score}", align=ALIGNMENT, font=FONT)
