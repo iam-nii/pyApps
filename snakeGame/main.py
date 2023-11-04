@@ -36,11 +36,13 @@ while game_is_on:
             snake.segments[0].ycor() <= -290:
         score.reset()
         snake.reset()
+        score.write_to_file()
     snake.move()
 
     # Detect collision with tail
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
             score.reset()
+            score.write_to_file()
 
 screen.exitonclick()
