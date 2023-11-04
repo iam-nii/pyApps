@@ -4,6 +4,12 @@ ALIGNMENT = "center"
 FONT = ('Courier', 18, 'bold')
 
 
+def get_high_score():
+    with open("high_score.txt", mode="r") as file:
+        high_score = int(file.read())
+        return high_score
+
+
 class ScoreBoard(Turtle):
 
     def __init__(self):
@@ -12,8 +18,7 @@ class ScoreBoard(Turtle):
         self.penup()
         self.goto(0, 270)
         self.score = 0
-        self.high_score = 0
-        self.get_high_score()
+        self.high_score = get_high_score()
         self.hideturtle()
         self.UpdateScore()
 
@@ -35,7 +40,3 @@ class ScoreBoard(Turtle):
         with open("high_score.txt", mode="w") as file:
             file.write(f"{self.high_score}")
 
-    def get_high_score(self):
-        with open("high_score.txt", mode="r") as file:
-            high_score = file.read()
-            self.high_score = int(high_score)
