@@ -54,12 +54,30 @@ import pandas
 
 
 # Creating a dataframe from scratch
-data_dict = {
-    "students": ["Amy", "Seth", "Jeffrey", "Victoria"],
-    "scores": [80, 48, 90, 10]
+# data_dict = {
+#     "students": ["Amy", "Seth", "Jeffrey", "Victoria"],
+#     "scores": [80, 48, 90, 10]
+# }
+#
+# data = pandas.DataFrame(data_dict)
+# print(data)
+#
+# data.to_csv("new_data.csv")
+
+
+#.................................................................................................#
+squirel_file = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data_20231105.csv")
+black_squirels = len(squirel_file[squirel_file["Primary Fur Color"] == "Black"])
+red_squirels = len(squirel_file[squirel_file["Primary Fur Color"] == "Cinnamon"])
+grey_squirels = len(squirel_file[squirel_file["Primary Fur Color"] == "Gray"])
+
+squirel_dict = {
+    "Fur colour": ["black", "grey", "count"],
+    "count": [black_squirels, grey_squirels, red_squirels]
 }
+# Without the square brackets, a value error is thrown. So the solution is to pass the dictionary into a list
+#data = pandas.DataFrame([squirel_dict]) but this doesn't display the data as I wanted
 
-data = pandas.DataFrame(data_dict)
+data = pandas.DataFrame(squirel_dict)
 print(data)
-
-data.to_csv("new_data.csv")
+data.to_csv("squirel_count.csv")
