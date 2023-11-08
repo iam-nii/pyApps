@@ -18,6 +18,7 @@ timer = None
 
 
 # ---------------------------- TIMER RESET ------------------------------- #
+# noinspection PyTypeChecker
 def reset_timer():
     global timer, reps, mark
     canvas.itemconfig(timer_text, text="00:00")
