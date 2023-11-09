@@ -33,13 +33,18 @@ code_dictionary = {row.letter: row.code for(index, row) in code_data_frame.iterr
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
 # Teachers approach
-word = input("Enter a word: ").upper()
-output = []
-try:
-    output = [code_dictionary[letter] for letter in word]
+def generate_phonetic():
+    word = input("Enter a word: ").upper()
+    try:
+        output = [code_dictionary[letter] for letter in word]
+    except KeyError:
+        print(f"Please enter letters of the english alphabets")
+        generate_phonetic()
+    else:
+        print(output)
 
-except KeyError as message:
-    print(f"{message} is not a valid letter in the english alphabets")
+
+generate_phonetic()
 #My approach lol
 # user_input = list(input("Enter a word: ").upper())
 # phonetic_list = [value for letter in user_input for (key, value) in code_dictionary.items() if letter == key]
