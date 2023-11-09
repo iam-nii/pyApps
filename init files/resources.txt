@@ -11,3 +11,7 @@ https://docs.python.org/3/library/turtle.html
 PANDA LIBRARY
 ________________
 https://pandas.pydata.org/docs/
+
+TKINTER
+_________________________________
+https://pythonexamples.org/python-tkinter/
