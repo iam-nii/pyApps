@@ -31,12 +31,12 @@ def get_stock_changes():
     print(yesterday_data)
     print(day_before_yesterday_data)
 
-    change = round((float(yesterday_data['4. close']) - float(day_before_yesterday_data['4. close'])) * 100 \
+    change = round(abs((float(yesterday_data['4. close']) - float(day_before_yesterday_data['4. close']))) * 100 \
              / float(yesterday_data['1. open']), 2)
 
     print(change)
 
-    if 2 < change or change < -5:
+    if change > 5:
         get_news(change)
 
 # STEP 2: Use https://newsapi.org
