@@ -8,7 +8,7 @@ with open("quotes.txt") as quotes_file:
 
 now = dt.datetime.now()
 weekday = now.weekday()
-if weekday == 5:
+if True:
     my_email = "portopapii@gmail.com"
     my_password = "scpg eymd zzqm hybc"
 
@@ -17,6 +17,6 @@ if weekday == 5:
         connection.login(user=my_email, password=my_password)
         connection.sendmail(
             from_addr=my_email,
-            to_addrs="stephanboldjnr@yahoo.com",
+            to_addrs="adjeiboyejnr@gmail.com",
             msg=f"Subject:Monday motivation\n\n{quote}"
         )
