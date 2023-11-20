@@ -1,4 +1,5 @@
 import smtplib
+import html
 class NotificationManager:
     def __init__(self):
         self.my_email = "portopapii@gmail.com"
@@ -19,7 +20,7 @@ class NotificationManager:
         connection.sendmail(
             from_addr=self.my_email,
             to_addrs=client_address,
-            msg=message
+            msg=html.escape(message)
         )
 
     def get_mail(self):

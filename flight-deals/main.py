@@ -10,18 +10,18 @@ notify = NotificationManager()
 
 # pprint(sheet_data)
 
-# Fill the empty iata codes in the table
-# for deal in sheet_data:
-#     if deal['iataCode'] == "":
-#         # Create an instance of the FlightSearch class
-#         search = FlightSearch()
-#         params = {
-#             "price": {
-#                 'iataCode': f"{search.get_iat_code(deal['city'])}"
-#             }
-#         }
-#         new_dm.send_data(deal['id'], params=params)
-#
+#Fill the empty iata codes in the table
+for deal in sheet_data:
+    if deal['iataCode'] == "":
+        # Create an instance of the FlightSearch class
+        search = FlightSearch()
+        params = {
+            "price": {
+                'iataCode': f"{search.get_iat_code(deal['city'])}"
+            }
+        }
+        new_dm.send_data(deal['id'], params=params)
+
 
 # Get the flight prices
 for row in sheet_data:
