@@ -1,5 +1,4 @@
 import pprint
-
 from bs4 import BeautifulSoup
 import requests
 from SendData import FillForm
