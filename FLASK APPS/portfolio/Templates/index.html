@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="nav-bar">
+        <h1>IAMNII</h1>
+        <ul>
+            <a href="#Hero" class="no-style"><li> Hero</li></a>
+            <a href="#Resume" class="no-style"><li>Resume</li>
+            <a href="#Projects" class="no-style"> <li>Projects</li></a>
+            <a href="#Info" class="no-style"><li>Info</li></a>
+            <a href="#contact" class="no-style"><li>Contact me</li></a>
+        </ul>
+    </div>
+    <div id="Hero">
+        <div id="Hero-intro">
+            <h2>Hi, I'm <span>Nii</span></h2>
+            <h4>Welcome to my site</h4>
+            <p>A <span>Full Stack Developer</span></p>
+            <p>& UI/UX designer</p>     
+        </div>   
+        <img src="static/programmer.png" alt="programmer ">
+    </div>
+
+    <div id="Resume" class="grid">
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul class="lists">
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C#</li>
+                <li>Html & CSS</li>
+                <li>Computer Aided Design</li>
+                <li>UI/UX design</li>
+            </ul>
+
+        </div>
+        <div class="edu">
+            <h2>Education</h2>
+            <ul class="lists">
+                <li>Mothers Nest Nursery</li>
+                <li>North Ridge Lyceum</li>
+                <li>Achimota Senior High School</li>
+                <li>University Of Ghana</li>
+                <li>Saint Petersburg State Hydrological Institute </li>
+                <li>Saint Petersburg State Institute of technology</li>
+            </ul>
+        </div>
+        <div class="work">
+            <h2>Work experience</h2>
+            <ul class="lists">
+                <li>Softmasters Company Limited</li>
+                <li>Council for Scientific and Industrial Research – Institute for Scientific 
+                    and Technological Information (CSIR-INSTI)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="Projects" class="projects-section">
+        <h2>Projects</h2>
+        <ul>
+            <li id="list-1"><p>Designing of rotor helicopter and hydro-cylinder using a <span>Computer Aided Design</span> software (SOLIDWORKS 2018 & Kompas 3D).</p> <img src="static/CAD-img.png" alt="computer images"> </li>
+            <li id="list-2"> <p>Console applications for the implementation of computer and <span>operating system algorithms</span> such as the Bankers', FIFO and LRU algorithms using C#</p> <img src="static/algo-img.png" alt="algorithm"></li>
+            <li id="list-3"><p>Creating an <span>information system</span> for tracking and storing the stages and materials involved in a car manufacturing process</p> <img src="static/info-system-img.png" alt="database administration"></li>
+            <li id="list-4"><p>And a few other minor projects available on my <a href="https://github.com/iam-nii">github</a>...Some are in my private repositories tho :)</p> <img src="static/github-gif-img.gif" alt=""></li>
+        </ul>
+    </div>
+    <div id="Info" class="information">
+        <h1>Nii is a quiet person. That's all you should know about Nii for now. </h1>
+    </div>
+    <div id="contact" class="footer">
+        <div class="footer-form">
+            <h1>Get in Touch</h1>
+            <form action="#">
+                <div id="sender-info">
+                    <input type="text" id="name" placeholder="Name"><br>
+                    <input type="text" id="email" placeholder="Email"><br>
+                </div>                
+
+                <input type="text" id="message" placeholder="Type a Message"><br>
+                <input type="submit" value="Send Message">
+
+            </form>
+        </div>
+        <div class="socials">
+            <img src="static/gmail-img.svg" alt=" gmail contact">
+            <img src="static/insta-img.svg" alt="instgram contact">
+            <img src="static/telegram-img.svg" alt="telegram contact">
+            <img src="static/vk-gif-img.png" alt=" vk contact">
+        </div>
+    </div>    
+</body>
+</html>

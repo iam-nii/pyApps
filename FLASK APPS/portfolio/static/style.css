@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,200;300;500;0,400;1,100&family=Poppins:wght@800;100&family=Roboto:wght@100;300;400;600;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*  Navigation bar style*/
+.nav-bar{
+    display: flex;
+    align-items: center;
+    gap: 40%;
+    background-color: #607274;
+    height: 100px;
+    width: 100%;  
+    justify-content: center;
+    
+}
+
+.nav-bar h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.no-style{
+    text-decoration: none;
+}
+.nav-bar ul li{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 300;    
+}
+
+
+/* Hero Section Style */
+#Hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#Hero-intro{
+    margin-right: 5%;
+    line-height: 3rem;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+    word-spacing: 5px;
+    font-size: 1em;
+    /* font-weight: 200; */
+}
+h2 > span{
+    font-size: 1.5em;
+}
+h4{
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: 100; */
+    font-size: 2em;
+}
+
+p{
+    font-family:  'Roboto', sans-serif;
+    font-size: 2em;
+    /* font-weight: 200; */
+}
+p > span{
+    color: #BF3131;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* Resume */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 250px;
+}
+
+.skills{
+    grid-column: 1;
+}
+.grid div > h2{
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 200;
+    color: black;
+    padding-left: 15px;
+}
+.edu{
+    grid-column: 2;
+}
+.work{
+    grid-column: 3;
+}
+.lists{
+    margin-top: 5%;
+    padding-left: 5%;
+    line-height: 2rem;
+}
+
+.grid div ul li{
+    font-family: 'Poppins', sans-serif;
+    color: #828281;
+    font-weight: 400;
+}
+/* Projects */
+.projects-section{
+    padding: 20px 250px;
+}
+.projects-section > ul{
+    line-height: 3rem;
+}
+.projects-section >h2{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.projects-section > ul li{
+    list-style-type: none;
+}
+.projects-section > ul li p{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    display: inline;
+}
+.projects-section > ul #list-1 img{
+    margin-left: 15%;
+}
+.projects-section > ul #list-2 img{
+    margin-left: 20%;
+}
+.projects-section > ul #list-3 img{
+    margin-left: 55%;
+}
+.projects-section > ul #list-4 img{
+    margin-left: 10%;
+}
+.projects-section > ul li img{
+    width: 25px;
+}
+.projects-section > ul li > span,
+.projects-section > ul li a
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #BF3131;
+    text-decoration: none;
+}
+
+/* Info */
+.information{
+    padding: 20px 250px;
+}
+.information > h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+/* Footer */
+.footer{
+    background-color: #B2A59B;
+    /*height: 60vh;*/
+    padding: 20px 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-form{
+    line-height: 2rem;    
+    width: 100%;
+}
+.footer-form > h1{
+    margin-bottom: 50px;
+}
+
+.footer-form h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: #3C3C3A;
+}
+#sender-info{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 30px;
+    gap: 10px;
+    height: 30px;
+}
+input[id="name"]{
+    grid-column: 1;    
+}
+input[id="email"]{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.socials{
+    display: flex;
+    float: right;
+    gap: 1em;
+    padding-right: 5rem;
+}
+.footer-form > form > #message{
+    width: 81%;
+    height: 100px;
+    margin: 10px 0px;
+}
+form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    color: white;
+}
+
+::-webkit-input-placeholder{
+    position:absolute;
+    left: 5px;
+    top: 4px;
+    font-size: 15px; 
+    color: white;
+}
+
+.socials >img{
+    width: 50px;
+}
+input{
+    background-color: #829699;
+    color: white;
+}
+
+/* For tablets */
+@media screen and (min-width:786px){
+    #Hero{
+        height: 600px;
+        margin: 3rem 0rem;
+    }
+    .footer{
+        /*height: 30vh;*/
+        padding: 20px 200px;
+    }
+    .information > h1 {
+        margin: 2rem 0rem;
+    }
+    #Hero-intro > h2{
+        font-size: 2rem;
+
+    }
+    #Hero-intro > h4{
+        font-size: 2.5rem;
+    }
+    p > span {
+        font-size:1.5em;
+    }
+    .grid {
+        padding: 20px 200px;
+        gap: 3em;
+    }
+    .grid div ul li {
+        font-size: 1.6em;
+    }
+    .projects-section > ul li >p {
+        font-size: 25px;
+    }
+    p > span {
+        font-size: 30px;
+    }
+    .projects-section {
+        padding: 20px 200px;
+    }
+    .projects-section > ul #list-1 img {
+        margin-left: 40%;
+    }
+    .projects-section > ul #list-2 img {
+        margin-left: 18%;
+    }
+    .projects-section > ul #list-3 img {
+        margin-left: 18%;
+    }
+    .projects-section > ul #list-4 img {
+        margin-left: 20%;
+    }
+    #sender-info {
+        grid-template-rows: 50px;
+        gap: 10px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .footer-form > form > #message {
+        margin: 20px 0px;
+    }
+    ::-webkit-input-placeholder{
+        font-size: 30px;
+    }
+    form > input {
+        width: 30%;
+        height: 10%;
+        font-size: 30px;
+    }
+}
