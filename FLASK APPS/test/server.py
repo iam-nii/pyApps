@@ -9,7 +9,6 @@ def hello():
     message = request.args.get('message')
     return render_template('recruto.html', name=name, message=message)
 
-
 @app.route('/')
 def home():
     return 'Добро пожаловать!'
