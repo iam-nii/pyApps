@@ -27,6 +27,7 @@ from sqlalchemy import Integer, String, FLOAT
 
 app = Flask(__name__)
 
+
 class Base(DeclarativeBase):
     pass
 
@@ -38,6 +39,7 @@ db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
 # Creating a new table
+
 
 class Books(db.Model):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
@@ -82,4 +84,12 @@ with app.app_context():
     update.title = "The Merry Men"
     db.session.commit()
 
-
+#     Deleting records
+book_id = 1
+with app.app_context():
+    book_to_delete = db.session.execute(db.select(Books).where(Books.id == book_id)).scalar()
+    # or book_to_delete = db.get_or_404(Book, book_id)
+    db.session.delete(book_to_delete)
+    # Or
+    # db.session.delete(db.session.execute(db.select(Books).where(Books.id == book_id)).scalar())
+    db.session.commit()

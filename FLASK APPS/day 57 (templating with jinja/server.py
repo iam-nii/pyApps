@@ -6,9 +6,11 @@ app = Flask(__name__)
 
 BLOGS = "https://api.npoint.io/c790b4d5cab58020d391"
 
+
 @app.route("/")
 def home():
     return "<h1>Home Page</h1>"
+
 
 @app.route("/guess/<username>")
 def guess(username: str):
